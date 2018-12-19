@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: helloworld
-  namespace: bugsy
+  namespace: rambo
 spec:
   minReadySeconds: 5
   replicas: 2
@@ -15,7 +15,7 @@ spec:
       - name: helloworld
         image: quay.io/weaveworks/helloworld:master-a000001
         args:
-        - -msg=Ahoy from Bugsy!
+        - -msg=Ahoy from Rambo!
         ports:
         - containerPort: 80
       - name: sidecar
