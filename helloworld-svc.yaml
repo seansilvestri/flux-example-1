@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld
+  namespace: bugsy
+spec:
+  ports:
+    - port: 80
+  selector:
+    name: helloworld
